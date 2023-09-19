@@ -4,35 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6</title>
+    <title>8</title>
+    <style>
+        div {
+            border: red 1px solid;
+        }
+    </style>
 </head>
 
 <body>
-    <form id="my-form">
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="name">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <input type="submit" value="Отправить">
-    </form>
+    <div class="example-class">
+        <p>WHY BE THE [Little Sponge] WHO HATES ITS [$4.99] LIFE</p>
+    </div>
+    <div>
+        <img
+        src="https://static.wikia.nocookie.net/deltarune/images/d/d9/Spamton_battle_static.png/revision/latest?cb=20220725090318" alt="">
+    </div>
+    <div class="example-class">
+        <p>DON'T FORGET TO [Like and Subscribe] FOR MORE [Hyperlink Blocked]! </p>
+    <div>
+        <h1>LET'S MAKE A DEAL.</h1>
+    </div>
 
     <script>
-        // Получаем форму
-        let form = document.getElementById("my-form");
-
-        // Добавляем обработчик события "submit"
-        form.addEventListener("submit", function (event) {
-            // Отменяем стандартное поведение формы
-            event.preventDefault();
-
-            // Получаем значения полей
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-
-            // Выводим значения полей в консоль
-            console.log("Имя: " + name);
-            console.log("Email: " + email);
-        });
+        let elems = document.getElementsByClassName("example-class");
+        for (let i = 0; i < elems.length; i++) {
+         elems[i].setAttribute("height","100px");
+    }
     </script>
 </body>
 
